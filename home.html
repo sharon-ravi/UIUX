@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Event Landing Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff8f6;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 30px;
+      background: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+      color: #ff4f5a;
+    }
+
+    .logo span {
+      color: #333;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      font-size: 15px;
+    }
+
+    .nav-links li {
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .nav-links li:hover {
+      color: #ff4f5a;
+    }
+
+    .btn {
+      background: #ff4f5a;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+
+    .hero {
+      background-image: url('https://images.pexels.com/photos/3182805/pexels-photo-3182805.jpeg?auto=compress&cs=tinysrgb&w=1600');
+      background-size: cover;
+      background-position: center;
+      height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    .explore-btn {
+      background-color: #ff4f5a;
+      border: none;
+      padding: 12px 26px;
+      font-size: 16px;
+      color: white;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .explore-btn:hover {
+      background-color: #e63f4b;
+    }
+
+    .venues {
+      padding: 60px 20px;
+    }
+
+    .venues h2 {
+      font-size: 32px;
+      margin-bottom: 40px;
+      color: #333;
+      text-align: center;
+    }
+
+    .venue-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .venue-card {
+      background-color: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .venue-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .venue-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .venue-card p {
+      padding: 15px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    /* Responsive for mobile */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 32px;
+      }
+      .hero p {
+        font-size: 16px;
+      }
+      .nav-links {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="logo">Event<span>Hub</span></div>
+    <ul class="nav-links">
+      <li>Home</li>
+      <li>Events</li>
+      <li>Contact</li>
+    </ul>
+    <button class="btn">Login</button>
+  </div>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div>
+      <h1>Plan Your Perfect Events With LetsGala</h1>
+      <p>Connecting with the best venues ,catetors and entertainers</p>
+      <button class="explore-btn">Explore Now</button>
+    </div>
+  </div>
+
+  <!-- Venues Section -->
+  <div class="venues">
+    <h2>Popular Venues</h2>
+    <div class="venue-grid">
+      <div class="venue-card">
+        <img src="https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Venue 1">
+        <p>Sunset Arena, LA</p>
+      </div>
+      <div class="venue-card">
+        <img src="https://images.pexels.com/photos/167473/pexels-photo-167473.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Venue 2">
+        <p>Sky Hall, New York</p>
+      </div>
+      <div class="venue-card">
+        <img src="https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Venue 3">
+        <p>Riverside Ground, Chicago</p>
+      </div>
+      <div class="venue-card">
+        <img src="https://images.pexels.com/photos/21067/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=800" alt="Venue 4">
+        <p>Downtown Club, San Francisco</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
